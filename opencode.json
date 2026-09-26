@@ -1,6 +1,17 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "provider": {
+    "atria": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Atria ASI — quota à confirmer",
+      "options": {
+        "baseURL": "https://api.atria-asi.ai/v1",
+        "apiKey": "{env:ATRIA_API_KEY}"
+      },
+      "models": {
+        "Atria-Dawn-Preview": { "name": "Atria Dawn Preview (quota gratuit non confirmé)" }
+      }
+    },
     "freetheai": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "FreeTheAI",
@@ -9,28 +20,33 @@
         "apiKey": "{env:FREETHEAI_API_KEY}"
       },
       "models": {
-        "glm/glm-5.2": { "name": "GLM-5.2 (1M) 🧠stratégie" },
-        "olm/deepseek-v4-pro": { "name": "DeepSeek V4 Pro (1M) 💻code" },
-        "kai/nvidia/nemotron-3-ultra-550b-a55b:free": { "name": "NVIDIA Ultra 550B (1M) ⚡agentic" },
-        "min/minimax-m3": { "name": "MiniMax M3 (1M) 🖼️multimodal" },
-        "opc/deepseek-v4-flash-free": { "name": "DeepSeek V4 Flash (200K) 🚀rapide" },
-        "kai/cohere/north-mini-code:free": { "name": "Cohere North Mini (256K) ⚡code rapide" }
+        "glm/glm-5.1": { "name": "GLM-5.1 (200K)" },
+        "glm/glm-5.2": { "name": "GLM-5.2 (1M)" },
+        "olm/deepseek-v4-pro": { "name": "DeepSeek V4 Pro" },
+        "kai/nvidia/nemotron-3-ultra-550b-a55b:free": { "name": "Nemotron 3 Ultra 550B (1M)" },
+        "min/minimax-m3": { "name": "MiniMax M3 (1M)" },
+        "kai/cohere/north-mini-code:free": { "name": "Cohere North Mini Code (256K)" },
+        "opc/nemotron-3-ultra-free": { "name": "Nemotron 3 Ultra Free (1M)" },
+        "opc/big-pickle": { "name": "Big Pickle (200K)" },
+        "kai/openrouter/free": { "name": "OpenRouter Free Router (200K)" },
+        "kai/stepfun/step-3.7-flash:free": { "name": "Step 3.7 Flash (262K)" },
+        "kai/poolside/laguna-xs-2.1:free": { "name": "Laguna XS 2.1 (262K)" }
       }
     },
     "mistral": {
       "npm": "@ai-sdk/openai-compatible",
-      "name": "Mistral AI",
+      "name": "Mistral AI (Free mode — crédits API mensuels) ",
       "options": {
         "baseURL": "https://api.mistral.ai/v1",
         "apiKey": "{env:MISTRAL_API_KEY}"
       },
       "models": {
-        "mistral-large-latest": { "name": "Mistral Large (262K) 🏆généraliste" },
-        "devstral-latest": { "name": "Devstral (262K) 🤖agentic" },
-        "mistral-medium-latest": { "name": "Mistral Medium (262K) ⚖️équilibre" },
-        "mistral-small-latest": { "name": "Mistral Small (262K) 💨léger" },
-        "magistral-medium-latest": { "name": "Magistral Medium (131K) ⚡reasoning" },
-        "ministral-8b-latest": { "name": "Ministral 8B (262K) 🚀fast" }
+        "mistral-large-2512": { "name": "Mistral Large 3 (crédits inclus)" },
+        "mistral-medium-3-5": { "name": "Mistral Medium 3.5 (crédits inclus)" },
+        "mistral-small-2603": { "name": "Mistral Small 4 (crédits inclus)" },
+        "codestral-2508": { "name": "Codestral (crédits inclus)" },
+        "ministral-3b-2512": { "name": "Ministral 3 3B (crédits inclus)" },
+        "ministral-8b-2512": { "name": "Ministral 3 8B (crédits inclus)" }
       }
     },
     "groq": {
@@ -41,36 +57,63 @@
         "apiKey": "{env:GROQ_API_KEY}"
       },
       "models": {
-        "openai/gpt-oss-120b": { "name": "GPT-OSS 120B (131K) 🚀vitesse" },
-        "meta-llama/llama-4-scout-17b-16e-instruct": { "name": "Llama 4 Scout (131K) 👁️vision" },
-        "llama-3.3-70b-versatile": { "name": "Llama 3.3 70B (131K) 🔒fiable" }
+        "openai/gpt-oss-120b": { "name": "GPT-OSS 120B (131K) vitesse" },
+        "meta-llama/llama-4-scout-17b-16e-instruct": { "name": "Llama 4 Scout (131K) vision" },
+        "llama-3.3-70b-versatile": { "name": "Llama 3.3 70B (131K)" }
       }
     },
     "google": {
       "npm": "@ai-sdk/openai-compatible",
-      "name": "Google Gemini",
+      "name": "Google Gemini (Free Tier) ",
       "options": {
         "baseURL": "https://generativelanguage.googleapis.com/v1beta/openai/",
         "apiKey": "{env:GOOGLE_API_KEY}"
       },
       "models": {
-        "models/gemini-3.1-pro-preview": { "name": "Gemini 3.1 Pro (1M) ⚡top code" },
-        "models/gemini-2.5-pro": { "name": "Gemini 2.5 Pro (1M) 💰moins cher" },
-        "models/gemini-2.5-flash": { "name": "Gemini 2.5 Flash (1M) 🧠contexte rapide" }
+        "gemini-3.8-flash": { "name": "Gemini 3.8 Flash (1M)" },
+        "gemini-3.7-flash": { "name": "Gemini 3.7 Flash (1M)" },
+        "gemini-3.6-flash": { "name": "Gemini 3.6 Flash (1M)" },
+        "gemini-3.5-flash": { "name": "Gemini 3.5 Flash (1M)" },
+        "gemini-3.5-flash-lite": { "name": "Gemini 3.5 Flash-Lite (1M)" },
+        "gemini-3.1-flash-lite": { "name": "Gemini 3.1 Flash-Lite (1M)" },
+        "gemini-2.5-pro": { "name": "Gemini 2.5 Pro (1M)" },
+        "gemini-2.5-flash": { "name": "Gemini 2.5 Flash (1M)" },
+        "gemini-2.5-flash-lite": { "name": "Gemini 2.5 Flash-Lite (1M)" },
+        "gemma-4-31b-it": { "name": "Gemma 4 31B IT" }
+      }
+    },
+    "nvidia": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "NVIDIA NIM (Free Endpoints / Trial)",
+      "options": {
+        "baseURL": "https://integrate.api.nvidia.com/v1",
+        "apiKey": "{env:NVIDIA_API_KEY}"
+      },
+      "models": {
+        "deepseek-ai/deepseek-v4.1-flash": { "name": "DeepSeek V4.1 Flash" },
+        "nvidia/nemotron-3-ultra-550b-a55b": { "name": "Nemotron 3 Ultra 550B" },
+        "nvidia/nemotron-3-super-120b-a12b": { "name": "Nemotron 3 Super 120B" },
+        "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning": { "name": "Nemotron 3 Nano Omni Reasoning" },
+        "nvidia/nemotron-3.5-lightning-30b-a3b": { "name": "Nemotron 3.5 Lightning 30B" },
+        "z-ai/glm-5.3": { "name": "GLM 5.3" },
+        "z-ai/glm-5.3-flash": { "name": "GLM 5.3 Flash" },
+        "meta/muse-glimmer-30b": { "name": "Muse Glimmer 30B" },
+        "moonshotai/kimi-k3": { "name": "Kimi K3" },
+        "google/gemma-4-31b-it": { "name": "Gemma 4 31B IT" }
       }
     },
     "openrouter": {
       "npm": "@ai-sdk/openai-compatible",
-      "name": "OpenRouter (free)",
+      "name": "OpenRouter (free models)",
       "options": {
         "baseURL": "https://openrouter.ai/api/v1",
         "apiKey": "{env:OPENROUTER_API_KEY}"
       },
       "models": {
-        "qwen/qwen3-coder:free": { "name": "Qwen Coder (1M) 🧬code agentic" },
-        "openai/gpt-oss-20b:free": { "name": "GPT-OSS 20B (131K) ⚡raisonnement" }
+        "qwen/qwen3-coder:free": { "name": "Qwen Coder (1M)" },
+        "openai/gpt-oss-20b:free": { "name": "GPT-OSS 20B (131K)" }
       }
     }
   },
-  "model": "mistral/devstral-latest"
+  "model": "google/gemini-2.5-flash"
 }
