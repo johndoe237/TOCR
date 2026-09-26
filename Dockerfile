@@ -1,6 +1,6 @@
 FROM node:22-bookworm-slim
 
-ARG OPENCODE_VERSION=1.18.2
+ARG OPENCODE_VERSION=1.18.32
 
 ENV DEBIAN_FRONTEND=noninteractive \
     NPM_CONFIG_UPDATE_NOTIFIER=false \
@@ -29,4 +29,4 @@ RUN chmod +x /app/entrypoint.sh \
 
 EXPOSE 4096
 
-ENTRYPOINT ["/usr/bin/tini", "--", "/app/entrypoint.sh"]
+ENTRYPOINT ["/usr/bin/tini", "--", "/bin/bash", "/app/entrypoint.sh"]
