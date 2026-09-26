@@ -3,13 +3,13 @@
   "provider": {
     "atria": {
       "npm": "@ai-sdk/openai-compatible",
-      "name": "Atria ASI — quota à confirmer",
+      "name": "Atria ASI",
       "options": {
         "baseURL": "https://api.atria-asi.ai/v1",
         "apiKey": "{env:ATRIA_API_KEY}"
       },
       "models": {
-        "Atria-Dawn-Preview": { "name": "Atria Dawn Preview (quota gratuit non confirmé)" }
+        "Atria-Dawn-Preview": { "name": "Atria Dawn Preview" }
       }
     },
     "freetheai": {
@@ -35,23 +35,23 @@
     },
     "mistral": {
       "npm": "@ai-sdk/openai-compatible",
-      "name": "Mistral AI (Free mode — crédits API mensuels) ",
+      "name": "Mistral AI",
       "options": {
         "baseURL": "https://api.mistral.ai/v1",
         "apiKey": "{env:MISTRAL_API_KEY}"
       },
       "models": {
-        "mistral-large-2512": { "name": "Mistral Large 3 (crédits inclus)" },
-        "mistral-medium-3-5": { "name": "Mistral Medium 3.5 (crédits inclus)" },
-        "mistral-small-2603": { "name": "Mistral Small 4 (crédits inclus)" },
-        "codestral-2508": { "name": "Codestral (crédits inclus)" },
-        "ministral-3b-2512": { "name": "Ministral 3 3B (crédits inclus)" },
-        "ministral-8b-2512": { "name": "Ministral 3 8B (crédits inclus)" }
+        "mistral-large-2512": { "name": "Mistral Large 3" },
+        "mistral-medium-3-5": { "name": "Mistral Medium 3.5" },
+        "mistral-small-2603": { "name": "Mistral Small 4" },
+        "codestral-2508": { "name": "Codestral" },
+        "ministral-3b-2512": { "name": "Ministral 3 3B" },
+        "ministral-8b-2512": { "name": "Ministral 3 8B" }
       }
     },
     "google": {
       "npm": "@ai-sdk/openai-compatible",
-      "name": "Google Gemini (Free Tier) ",
+      "name": "Google Gemini",
       "options": {
         "baseURL": "https://generativelanguage.googleapis.com/v1beta/openai/",
         "apiKey": "{env:GOOGLE_API_KEY}"
@@ -71,7 +71,7 @@
     },
     "nvidia": {
       "npm": "@ai-sdk/openai-compatible",
-      "name": "NVIDIA NIM (Free Endpoints / Trial)",
+      "name": "NVIDIA NIM",
       "options": {
         "baseURL": "https://integrate.api.nvidia.com/v1",
         "apiKey": "{env:NVIDIA_API_KEY}"
@@ -91,14 +91,31 @@
     },
     "openrouter": {
       "npm": "@ai-sdk/openai-compatible",
-      "name": "OpenRouter (free models)",
+      "name": "OpenRouter",
       "options": {
         "baseURL": "https://openrouter.ai/api/v1",
         "apiKey": "{env:OPENROUTER_API_KEY}"
       },
       "models": {
-        "qwen/qwen3-coder:free": { "name": "Qwen Coder (1M)" },
-        "openai/gpt-oss-20b:free": { "name": "GPT-OSS 20B (131K)" }
+        "stealth/space-bunny-alpha": { "name": "Space Bunny Alpha (1M)" },
+        "inclusionai/ling-3.0-flash-sante:free": { "name": "Ling 3.0 Flash Sante (262K)" },
+        "inclusionai/ling-3.0-flash-fin:free": { "name": "Ling 3.0 Flash Fin (262K)" },
+        "qwen/qwen3.8-27b:free": { "name": "Qwen 3.8 27B (262K)" },
+        "dots-studio/dots-3-note-preview:free": { "name": "Dots 3 Note Preview (512K)" },
+        "liquid/lfm-2.5-2.6b:free": { "name": "LFM 2.5 2.6B (65K)" },
+        "nvidia/nemotron-3.5-lightning:free": { "name": "Nemotron 3.5 Lightning (1M)" },
+        "thinkingmachines/inkling-small:free": { "name": "Inkling Small (1M)" },
+        "poolside/laguna-s-2.1:free": { "name": "Laguna S 2.1 (262K)" },
+        "thinkingmachines/inkling:free": { "name": "Inkling (1M)" },
+        "poolside/laguna-xs-2.1:free": { "name": "Laguna XS 2.1 (262K)" },
+        "cohere/north-mini-code:free": { "name": "North Mini Code (256K)" },
+        "nvidia/nemotron-3.5-content-safety:free": { "name": "Nemotron 3.5 Content Safety (128K)" },
+        "nvidia/nemotron-3-ultra-550b-a55b:free": { "name": "Nemotron 3 Ultra 550B (1M)" },
+        "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": { "name": "Nemotron 3 Nano Omni (256K)" },
+        "google/gemma-4-26b-a4b-it:free": { "name": "Gemma 4 26B A4B (262K)" },
+        "google/gemma-4-31b-it:free": { "name": "Gemma 4 31B (262K)" },
+        "nvidia/nemotron-3-super-120b-a12b:free": { "name": "Nemotron 3 Super 120B (262K)" },
+        "openrouter/free": { "name": "Free Models Router (200K)" }
       }
     }
   },
